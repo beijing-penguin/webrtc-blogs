@@ -72,17 +72,13 @@ source /etc/profile
 7. 启动OWT
 如果有外网IP，则需要如下配置：（如果内网ip访问和验证，则不需要下面的配置，直接使用内网IP：192.168.X.X就可以）
 
-    ``` shell 
-    vim ~/owt-server/dist/portal/portal.toml
-    # 修改
-    ip_address = "你的外网IP"
-    ```
-
-    ``` shell 
-    vim ~/owt-server/dist/webrtc_agent/agent.toml
-    #修改
-    network_interfaces = [{name = "eth0", replaced_ip_address = "你的外网IP"}]
-    ```
+    1. 设置服务器的公网IP，编辑` vim ~/owt-server/dist/webrtc_agent/agent.toml` ，修改 [webrtc] 部分的 network_interfaces
+        {name = "eth0", replaced_ip_address = "你的公网IP"}（需要把 name 设置为网卡实际名称，replaced_ip_address 设置为服务器公网 IP 地址）
+        
+        <p align="center"><img width="40%" src="img/webrtc_icon2.png" /></p>
+    
+    2. 编辑 `vim ~/owt-server/dist/portal/portal.toml` ，修改 [portal] 部分里的 ip_address 为服务器公网 IP 地址
+        <p align="center"><img width="40%" src="img/webrtc_icon2.png" /></p>
 8. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
 
     1. 关闭防火墙`ufw disable`
@@ -105,5 +101,7 @@ source /etc/profile
 
 10. 验证
 
-    <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
-    <p>https://IP地址:3004</p>
+    1. 浏览器先访问，获取ca证书<p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
+    2. 再访问<p>https://IP地址:3004</p>
+    
+11. 成功
