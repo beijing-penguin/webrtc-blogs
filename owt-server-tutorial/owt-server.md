@@ -96,5 +96,5 @@ cd ~/owt-server
 
 9. 验证
 
-<p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
-<p>https://IP地址:3004</p>
+    <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
+    <p>https://IP地址:3004</p>
