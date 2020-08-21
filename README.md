@@ -16,4 +16,4 @@
 * [RTP 网络协议](https://###)
 
 ### 2. OWT-Server
-* [owt-server github master最新主干代码编译安装](https://github.com/beijing-penguin/webrtc-blogs/owt-server-tutorial/owt-server.md)
+* [owt-server github master最新主干代码编译安装](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-server.md)
