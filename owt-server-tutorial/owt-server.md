@@ -91,10 +91,9 @@ cd ~/owt-server
 ```
 
 9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
-
 关闭防火墙`ufw disable`
 
 9. 验证
 
-https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn
-https://IP地址:3004
+<p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
+<p>https://IP地址:3004</p>
