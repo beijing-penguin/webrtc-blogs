@@ -73,12 +73,12 @@ scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/
 **>>> Step 7:** 启动OWT
 如果有外网IP，则需要如下配置：（如果内网ip访问和验证，则不需要下面的配置，直接使用内网IP：192.168.X.X就可以）
 
-    1. 设置服务器的公网IP，编辑` vim ~/owt-server/dist/webrtc_agent/agent.toml` ，修改 [webrtc] 部分的 network_interfaces
+1. 设置服务器的公网IP，编辑` vim ~/owt-server/dist/webrtc_agent/agent.toml` ，修改 [webrtc] 部分的 network_interfaces
         {name = "eth0", replaced_ip_address = "你的公网IP"}（需要把 name 设置为网卡实际名称，replaced_ip_address 设置为服务器公网 IP 地址）
         
 <p align="center"><img  src="../img/1.png" /></p>
     
-    2. 编辑 `vim ~/owt-server/dist/portal/portal.toml` ，修改 [portal] 部分里的 ip_address 为服务器公网 IP 地址
+2. 编辑 `vim ~/owt-server/dist/portal/portal.toml` ，修改 [portal] 部分里的 ip_address 为服务器公网 IP 地址
     
 <p align="center"><img  src="../img/2.png" /></p>
         
@@ -102,11 +102,11 @@ cd ~/owt-server
 
 **>>> Step 10:** 验证
 
-    1. 浏览器先访问，获取ca证书
+1. 浏览器先访问，获取ca证书
     
 <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
         
-    2. 再访问，打开两个地址
-        <p>https://IP地址:3004</p>
+2. 再访问，打开两个地址
+<p>https://IP地址:3004</p>
         
 <p align="center"><img  src="../img/4.png" /></p>
