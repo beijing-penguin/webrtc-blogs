@@ -1,0 +1,9 @@
+.idea
+*.iml
+target
+logs
+.idea/workspace.xml
+*.log
+.settings
+.project
+.classpath
