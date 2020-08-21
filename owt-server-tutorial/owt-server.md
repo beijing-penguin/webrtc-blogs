@@ -15,9 +15,9 @@ Owt-Server流媒体服务器，提供了基于Webrtc的高性能实时视频会�
 2.CentOs 7.6（已验证安装成功，但是需要升级默认gcc4.8到gcc7.5版本，不升级会有编译错误，安装失败）
 
 #### Ubuntu 18.04系统环境准备
-
+依次执行下面命令：
 1. `apt-get update`
-2. apt-get install autoconf automake  autoconf make git wget pciutils cpio libtool lsb-release ca-certificates pkg-config zlib1g-dev nasm yasm m4 autoconf libtool automake cmake libfreetype6-dev libglib2.0-dev liblog4cxx-dev libboost-system-dev python  net-tools  
+2. `apt-get install autoconf automake  autoconf make git wget pciutils cpio libtool lsb-release ca-certificates pkg-config zlib1g-dev nasm yasm m4 autoconf libtool automake cmake libfreetype6-dev libglib2.0-dev liblog4cxx-dev libboost-system-dev python  net-tools`  
 
 #### 最新源码安装
 
