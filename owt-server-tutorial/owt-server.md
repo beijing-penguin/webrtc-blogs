@@ -56,7 +56,7 @@ source /etc/bash.bashrc
 ``` shell
 #切换到~目录
 cd ~
-git clone https://github.com/beijing-penguin/owt-client-javascrip
+git clone https://github.com/beijing-penguin/owt-client-javascript
 cd owt-client-javascript
 npm install -g grunt-cli
 npm install  && cd scripts && grunt
@@ -83,14 +83,18 @@ vim ~/owt-server/dist/webrtc_agent/agent.toml
 #修改
 network_interfaces = [{name = "eth0", replaced_ip_address = "你的外网IP"}]
 ```
-启动： 
+8. 启动： 
 
 ``` shell
 cd ~/owt-server
 (cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
 ```
 
-8. 验证
-如果是本地
-https://192.168.72.137:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn
-```
+9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
+
+关闭防火墙`ufw disable`
+
+9. 验证
+
+https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn
+https://IP地址:3004
