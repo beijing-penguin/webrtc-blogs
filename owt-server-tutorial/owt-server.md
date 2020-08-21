@@ -106,6 +106,4 @@ source /etc/profile
         <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
     2. 再访问
         <p>https://IP地址:3004</p>
-    
-11. 成功
-     <p align="center"><img  src="../img/4.png" /></p>
+        <p align="center"><img  src="../img/4.png" /></p>
