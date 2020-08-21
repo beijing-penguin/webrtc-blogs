@@ -108,3 +108,4 @@ source /etc/profile
         <p>https://IP地址:3004</p>
     
 11. 成功
+     <p align="center"><img  src="../img/3.png" /></p>
