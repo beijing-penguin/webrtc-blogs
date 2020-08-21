@@ -90,7 +90,7 @@ cd ~/owt-server
 (cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
 ```
 
-9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
+9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。 
 关闭防火墙`ufw disable`
 
 9. 验证
