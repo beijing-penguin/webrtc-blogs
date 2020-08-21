@@ -34,7 +34,8 @@ source /etc/profile
 ```
  
 #### 四、源码编译安装
-**>>> 1. 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
+
+**>>> Step 1:** 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
 
     ``` shell
     wget https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
