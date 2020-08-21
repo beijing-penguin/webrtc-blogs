@@ -29,10 +29,26 @@ export http_proxy=http://192.168.100.234:1080
 export https_proxy=http://192.168.100.234:1080 
 export ftp_proxy=http://192.168.100.234:1080
 ```
-
+`source /etc/profile`
+ 
 #### 四、源码编译安装
-1. `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
-2. `cd owt-server && scripts/installDeps.sh`
-3. ``
+1. 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
+`wget https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz`  
+`tar xf node-v10.13.0-linux-x64.tar.xz` 
+`vim /etc/bash.bashrc` 
+`export PATH=$PATH:/root/node-v10.13.0-linux-x64/bin` 
+`source /etc/bash.bashrc`
 
+2. 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
+
+3. 非交互式（不需要手动输入Y确认步骤）安装owt依赖 `cd owt-server && scripts/installDepsUnattended.sh`  或者  交互式安装 `cd owt-server && scripts/installDeps.sh`
+
+4. 编译owt源代码 `scripts/build.js -t all --check`
+
+5. 官方提供的网页版的案例程序，也需要下载安装，步骤如下： 
+cd到~目录 `cd ~` 
+`git clone https://github.com/beijing-penguin/owt-client-javascript` 
+`cd owt-client-javascript`
+`npm install -g grunt-cli`
+`npm install  && cd scripts && grunt`
 
