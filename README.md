@@ -17,6 +17,7 @@
 
 ### 2. OWT-Server
 * [编译安装](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-server.md)
-* [爬坑记录](https://###)
+* [研究OWT过程记录](https://###)
 * [代码结构](https://###)
 * [绘制文本](https://###)
+* [集群部署](https://###)
