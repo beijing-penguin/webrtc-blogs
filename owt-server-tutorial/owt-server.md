@@ -36,14 +36,14 @@ source /etc/profile
 #### 四、源码编译安装
 1. 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
 
-``` shell
-wget https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
-tar xf node-v10.13.0-linux-x64.tar.xz
-vim /etc/bash.bashrc
-export PATH=$PATH:/root/node-v10.13.0-linux-x64/bin
-
-source /etc/bash.bashrc
-```
+    ``` shell
+    wget https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
+    tar xf node-v10.13.0-linux-x64.tar.xz
+    vim /etc/bash.bashrc
+    export PATH=$PATH:/root/node-v10.13.0-linux-x64/bin
+    
+    source /etc/bash.bashrc
+    ```
 
 2. 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
 
@@ -53,42 +53,42 @@ source /etc/bash.bashrc
 
 5. 官方提供的网页版的案例程序，也需要下载安装，步骤如下： 
 
-``` shell
-#切换到~目录
-cd ~
-git clone https://github.com/beijing-penguin/owt-client-javascript
-cd owt-client-javascript
-npm install -g grunt-cli
-npm install  && cd scripts && grunt
-```
+    ``` shell
+    #切换到~目录
+    cd ~
+    git clone https://github.com/beijing-penguin/owt-client-javascript
+    cd owt-client-javascript
+    npm install -g grunt-cli
+    npm install  && cd scripts && grunt
+    ```
 
 6. 上述步骤安装完成后，回到owt-server源码目录，打包nodejs和生产可运行的二进制代码，默认可运行代码放在~/owt-server/dist目录 
 
-``` shell
-cd ~/owt-server
-scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/samples/conference
-```
+    ``` shell
+    cd ~/owt-server
+    scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/samples/conference
+    ```
 
 7. 启动OWT
 如果有外网IP，则需要如下配置：（如果内网ip访问和验证，则不需要下面的配置，直接使用内网IP：192.168.X.X就可以）
 
-``` shell 
-vim ~/owt-server/dist/portal/portal.toml
-# 修改
-ip_address = "你的外网IP"
-```
+    ``` shell 
+    vim ~/owt-server/dist/portal/portal.toml
+    # 修改
+    ip_address = "你的外网IP"
+    ```
 
-``` shell 
-vim ~/owt-server/dist/webrtc_agent/agent.toml
-#修改
-network_interfaces = [{name = "eth0", replaced_ip_address = "你的外网IP"}]
-```
+    ``` shell 
+    vim ~/owt-server/dist/webrtc_agent/agent.toml
+    #修改
+    network_interfaces = [{name = "eth0", replaced_ip_address = "你的外网IP"}]
+    ```
 8. 启动： 
 
-``` shell
-cd ~/owt-server
-(cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
-```
+    ``` shell
+    cd ~/owt-server
+    (cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
+    ```
 
 9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
 
