@@ -54,21 +54,21 @@ source /etc/bash.bashrc
 
 **>>> Step 5:** 官方提供的网页版的案例程序，也需要下载安装，步骤如下： 
 
-    ``` shell
-    #切换到~目录
-    cd ~
-    git clone https://github.com/beijing-penguin/owt-client-javascript
-    cd owt-client-javascript
-    npm install -g grunt-cli
-    npm install  && cd scripts && grunt
-    ```
+``` shell
+#切换到~目录
+cd ~
+git clone https://github.com/beijing-penguin/owt-client-javascript
+cd owt-client-javascript
+npm install -g grunt-cli
+npm install  && cd scripts && grunt
+```
 
 **>>> Step 6:** 上述步骤安装完成后，回到owt-server源码目录，打包nodejs和生产可运行的二进制代码，默认可运行代码放在~/owt-server/dist目录 
 
-    ``` shell
-    cd ~/owt-server
-    scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/samples/conference
-    ```
+``` shell
+cd ~/owt-server
+scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/samples/conference
+```
 
 **>>> Step 7:** 启动OWT
 如果有外网IP，则需要如下配置：（如果内网ip访问和验证，则不需要下面的配置，直接使用内网IP：192.168.X.X就可以）
@@ -84,23 +84,21 @@ source /etc/bash.bashrc
         
 **>>> Step 8:** 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
 
-    1. 关闭防火墙`ufw disable`
-    2. 如果配了防火墙规则，则需要修改如下配置
-    ```
-    vim ~/owt-server/dist/webrtc_agent/agent.toml
-    # The webrtc port range
-    maxport = 40000 #default: 0
-    minport = 35000 #default: 0
-    ```
+1. 关闭防火墙`ufw disable`
+2. 如果配了防火墙规则，则需要修改如下配置
+```
+vim ~/owt-server/dist/webrtc_agent/agent.toml
+# The webrtc port range
+maxport = 40000 #default: 0
+minport = 35000 #default: 0
+```
 
 **>>> Step 9:** 启动： 
 
-    ``` shell
-    cd ~/owt-server
-    (cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
-    ```
-
-
+``` shell
+cd ~/owt-server
+(cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
+```
 
 **>>> Step 10:** 验证
 
