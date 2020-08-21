@@ -46,13 +46,13 @@ source /etc/profile
     source /etc/bash.bashrc
     ```
 
-**>>> 2. 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
+**>>> Step 2:** 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
 
-3. 非交互式（不需要手动输入Y确认步骤）安装owt依赖 `cd owt-server && scripts/installDepsUnattended.sh`  或者  交互式安装 `cd owt-server && scripts/installDeps.sh`
+**>>> Step 3:** 非交互式（不需要手动输入Y确认步骤）安装owt依赖 `cd owt-server && scripts/installDepsUnattended.sh`  或者  交互式安装 `cd owt-server && scripts/installDeps.sh`
 
-4. 编译owt源代码 `scripts/build.js -t all --check`
+**>>> Step 4:** 编译owt源代码 `scripts/build.js -t all --check`
 
-5. 官方提供的网页版的案例程序，也需要下载安装，步骤如下： 
+**>>> Step 5:** 官方提供的网页版的案例程序，也需要下载安装，步骤如下： 
 
     ``` shell
     #切换到~目录
@@ -63,14 +63,14 @@ source /etc/profile
     npm install  && cd scripts && grunt
     ```
 
-6. 上述步骤安装完成后，回到owt-server源码目录，打包nodejs和生产可运行的二进制代码，默认可运行代码放在~/owt-server/dist目录 
+**>>> Step 6:** 上述步骤安装完成后，回到owt-server源码目录，打包nodejs和生产可运行的二进制代码，默认可运行代码放在~/owt-server/dist目录 
 
     ``` shell
     cd ~/owt-server
     scripts/pack.js -t all --install-module --app-path ~/owt-client-javascript/dist/samples/conference
     ```
 
-7. 启动OWT
+**>>> Step 7:** 启动OWT
 如果有外网IP，则需要如下配置：（如果内网ip访问和验证，则不需要下面的配置，直接使用内网IP：192.168.X.X就可以）
 
     1. 设置服务器的公网IP，编辑` vim ~/owt-server/dist/webrtc_agent/agent.toml` ，修改 [webrtc] 部分的 network_interfaces
@@ -81,7 +81,7 @@ source /etc/profile
     2. 编辑 `vim ~/owt-server/dist/portal/portal.toml` ，修改 [portal] 部分里的 ip_address 为服务器公网 IP 地址
         <p align="center"><img  src="../img/2.png" /></p>
         
-8. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
+**>>> Step 8:** 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
 
     1. 关闭防火墙`ufw disable`
     2. 如果配了防火墙规则，则需要修改如下配置
@@ -92,7 +92,7 @@ source /etc/profile
     minport = 35000 #default: 0
     ```
 
-9. 启动： 
+**>>> Step 9:** 启动： 
 
     ``` shell
     cd ~/owt-server
@@ -101,7 +101,7 @@ source /etc/profile
 
 
 
-10. 验证
+**>>> Step 10:** 验证
 
     1. 浏览器先访问，获取ca证书
         <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
