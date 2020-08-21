@@ -34,7 +34,7 @@ source /etc/profile
 ```
  
 #### 四、源码编译安装
->>> 1. 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
+**>>> 1. 最新的OWT已升级node8.5到 10 版本 所以先安装 node10  
 
     ``` shell
     wget https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
@@ -45,7 +45,7 @@ source /etc/profile
     source /etc/bash.bashrc
     ```
 
->>> 2. 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
+**>>> 2. 克隆官方最新代码 `git clone https://github.com/open-webrtc-toolkit/owt-server.git`
 
 3. 非交互式（不需要手动输入Y确认步骤）安装owt依赖 `cd owt-server && scripts/installDepsUnattended.sh`  或者  交互式安装 `cd owt-server && scripts/installDeps.sh`
 
