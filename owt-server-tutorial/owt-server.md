@@ -102,7 +102,9 @@ source /etc/profile
 
 10. 验证
 
-    1. 浏览器先访问，获取ca证书<p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
-    2. 再访问<p>https://IP地址:3004</p>
+    1. 浏览器先访问，获取ca证书
+        <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
+    2. 再访问
+        <p>https://IP地址:3004</p>
     
 11. 成功
