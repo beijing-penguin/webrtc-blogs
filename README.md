@@ -1,4 +1,4 @@
-<p align="center"><img width="40%" src="../img/webrtc_icon.jpg" /></p>
+<p align="center"><img width="40%" src="img/webrtc_icon.jpg" /></p>
 
 --------------------------------------------------------------------------------
 
