@@ -83,18 +83,27 @@ source /etc/profile
     #修改
     network_interfaces = [{name = "eth0", replaced_ip_address = "你的外网IP"}]
     ```
-8. 启动： 
+8. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
+
+    1. 关闭防火墙`ufw disable`
+    2. 如果配了防火墙规则，则需要修改如下配置
+    ```
+    vim ~/owt-server/dist/webrtc_agent/agent.toml
+    # The webrtc port range
+    maxport = 40000 #default: 0
+    minport = 35000 #default: 0
+    ```
+
+9. 启动： 
 
     ``` shell
     cd ~/owt-server
     (cd dist && ./bin/init-all.sh && ./bin/start-all.sh)
     ```
 
-9. 关闭防火墙，OWT需要通过UDP端口进行视频通信，需要关闭防火墙 或者配置UDP 端口 防火墙规则。
 
-    关闭防火墙`ufw disable`
 
-9. 验证
+10. 验证
 
     <p>https://IP地址:8080/socket.io/?EIO=3&transport=polling&t=N2UmsIn</p>
     <p>https://IP地址:3004</p>
