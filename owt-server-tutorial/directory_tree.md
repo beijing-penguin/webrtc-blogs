@@ -1,65 +1,56 @@
 ```
-build 编译所需的依赖库
-    |---expat
-    |---ffmpeg
-    |---libnice
-    |---libsrtp
-    |---openssl
-    |---re
-    |---usrsctp
-    |---zlib
-cert
-dist 编译生成的服务，集群配置
-doc 说明文档
-docker
-node_modules
-scripts  脚本执行入口
-         |----installDepsUnattended.sh  安装依赖
-         |----build.sh 编译
-         |----pack.js 打包
-         |----installCommonDeps.sh 安装模块，包含webrtc
-source
-      |----agent
-             |----addons
-             |----analytics
-             |----audio  音频的处理，转码，混音
-             |----conference 房间的控制逻辑
-             |----plugins
-             |----recording 录制媒体
-             |----sip  sip接入
-             |----streamig 拉取流媒体转换成rtmp或rtsp
-             |----video 视频的处理，转码，混音
-             |----webrtc webrtc接入
-                     
-      |----cluster_manager 控制集群的works，调度works
-      |----common
-      |----core
-      |----data_access
-      |----management_api
-      |----management_console
-      |----portal 信令服务器，处理io请求
-              |----socketIOServer.js  信令监听
-              |----v10Client.js    信令监听
-      |----sip_portal
-test
-third_party
-    |----licode
-            |----erizo  c++实现的webrtc栈
-            |----erizoAPI  对erizo的封装，实现js调用c++
-            |----erizo_controller 客户端和服务器的接口模块
-    |----mediasdk
-    |----openh264
-    |----quic-lib
-    |----svc-hevc
-    |----webrtc
-           |----src
-                 |----tools-woogeen 编译脚本，只用了部分模块
-                 |----install.sh 下载依赖模块
-                 |----build.sh  说明了用到的模块，编译成libwebrtc.a
-                 |----third_party  用到的模块并不多
-                            |----libvpx
-                            |----libyuv
-                            |----opus
-                            |----protobuf
-                            |----yasm
+├── build 编译所需的依赖库
+│   └── libdeps
+│       ├── build
+│       ├── expat-2.2.6
+│       ├── ffmpeg-4.1.3
+│       ├── libnice-0.1.4
+│       ├── openssl-1.1.1g
+│       ├── re
+│       ├── usrsctp
+│       ├── zlib-1.2.11
+├── cert 证书
+│   ├── certificate.pfx
+│   ├── cert.pem
+│   └── key.pem
+├── dist 打包生成的可运行目录
+│   ├── analytics_agent 流媒体分析
+│   ├── apps 浏览器前端展示页面
+│   ├── audio_agent 音频处理
+│   ├── bin 停止、启动、初始化脚本
+│   ├── cluster_manager 集群管理服务
+│   ├── conference_agent 会议管理服务
+│   ├── logs 日志
+│   ├── management_api 外网管理API可访问接口
+│   ├── management_console 外网管理控制台页面
+│   ├── portal 长连接websocket服务
+│   ├── recording_agent 视频录制
+│   ├── sip_agent 信令处理
+│   ├── sip_portal 信令
+│   ├── streaming_agent 流处理
+│   ├── video_agent 视频编解码
+│   └── webrtc_agent 长连接webrtc网关
+├── doc 说明文档
+├── docker
+├── node_modules
+├── scripts 脚本
+├── source 源码代码目录
+│   ├── agent 类似微服务模块目录
+│   ├── cluster_manager 集群管理者
+│   ├── common 公共模块，rpc请求工具，rabbitmq连接工具，日志打印工具等
+│   ├── core 核心C/C++模块
+│   ├── data_access 数据模块
+│   ├── management_api 外网管理API可访问接口
+│   ├── management_console 外网管理控制台页面
+│   ├── portal 长连接websocket服务
+│   └── sip_portal 信令SIP服务
+├── test 测试程序
+└── third_party 第三方依赖模块
+    ├── licode
+    ├── mediasdk
+    ├── openh264
+    ├── quic-lib
+    ├── SVT-HEVC
+    ├── webrtc 编译后的webrtclib.a和一些.h头文件
+    └── webrtc-m79 谷歌webrtc客户端源码
 ```
