@@ -2,7 +2,7 @@
 
 --------------------------------------------------------------------------------
 
-该存储库为流媒体研究技术人员提供学习webrtc的教程。
+该存储库webrtc技术 学习的教程
 
 
 <br/>
@@ -16,6 +16,7 @@
 * [ ] [RTP 网络协议](https://###)
 
 ### 2. OWT-Server
+* [ ] [OWT架构篇](https://github.com/beijing-penguin/webrtc-blogs)
 * [x] [编译安装ubuntu/centos](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-server-install.md)
 * [ ] [OWT研究笔记](https://github.com/beijing-penguin/webrtc-blogs)
 * [x] [代码结构](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/directory_tree.md)

@@ -1,14 +1,3 @@
-## Open WebRTC Toolkit Media Server
-
-Owt-Server流媒体服务器，提供了基于Webrtc的高性能实时视频会议和流媒体服务技术，它能通过cluster_manage管理集群，自动完成负载均衡和高可用的分布式功能。同时Owt-Server提供了可选的流媒体实时分析插件模块，用户安装官方内置的如人脸识别，智能教室-手势识别等插件，也可以自行对接官方插件接口，完成实时的视频流的动态分析。OWT特点如下：
-
-- 分布式，可扩展且可靠的SFU + MCU服务器
-- 英特尔®酷睿™和英特尔®至强®处理器上的高性能VP8，VP9，H.264和HEVC实时转码
-- 支持大多数流媒体协议，包括WebRTC，RTSP，RTMP，HLS，MPEG-DASH
-- 高效混合高清视频流，以节省移动设备的带宽和性能
-- 适应不同网络环境的智能服务质量（QoS）控制机制
-- 自定义的流媒体分析插件，实时的计算机视觉分析
-
 ### OWT-Server 最新github master主干代码编译安装，单机部署安装
 #### 一、服务器系统
 1. Ubuntu 18.04(本次安装使用该系统，系统下载链接http://old-releases.ubuntu.com/releases/18.04.4/ubuntu-18.04-server-amd64.iso)
