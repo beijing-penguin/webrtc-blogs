@@ -19,3 +19,21 @@ OWT-Server架构时基于MCU和SFU架构基础形式开发的流媒体服务。S
 
 ## OWT架构
 `OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。
+
+ **Table 3-2 Supported Media Formats**
+Name|Type
+-----|-----
+opus | audio
+isac_16000 | audio
+isac_32000 | audio
+g722_16000_1 | audio
+pcma | audio
+pcmu | audio
+aac | audio
+ac3 | audio
+nellymoser | audio
+ilbc | audio
+h264 | video
+h265 | video
+vp8 | video
+vp9 | video
