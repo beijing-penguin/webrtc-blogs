@@ -16,7 +16,7 @@
 * [ ] [RTP 网络协议](https://###)
 
 ### 2. OWT-Server
-* [ ] [OWT架构篇](https://github.com/beijing-penguin/webrtc-blogs)
+* [x] [OWT架构篇](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-framework.md)
 * [x] [编译安装ubuntu/centos](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-server-install.md)
 * [ ] [OWT研究笔记](https://github.com/beijing-penguin/webrtc-blogs)
 * [x] [代码结构](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/directory_tree.md)
