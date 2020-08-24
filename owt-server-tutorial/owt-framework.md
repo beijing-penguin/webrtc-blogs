@@ -20,20 +20,20 @@ OWT-Server架构时基于MCU和SFU架构基础形式开发的流媒体服务。S
 ## OWT架构
 `OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。
 
- **Table 3-2 Supported Media Formats**
-Name|Type
------|-----
-opus | audio
-isac_16000 | audio
-isac_32000 | audio
-g722_16000_1 | audio
-pcma | audio
-pcmu | audio
-aac | audio
-ac3 | audio
-nellymoser | audio
-ilbc | audio
-h264 | video
-h265 | video
-vp8 | video
-vp9 | video
+ **Table 2-5. Distributed OWT server components**
+Component Name|Deployment Number|Responsibility
+--------|--------|--------
+management-api|1 or many|The entrance of OWT service, keeping the configurations of all rooms, generating and verifying the tokens. Application can implement load balancing strategy across multiple management-api instances
+cluster-manager|1 or many|The manager of all active workers in the cluster, checking their lives, scheduling workers with the specified purposes according to the configured policies. If one has been elected as master, it will provide service; others will be standby
+portal|1 or many|The signaling server, handling service requests from Socket.IO clients
+conference-agent|1 or many|This agent handles room controller logics
+webrtc-agent|1 or many|This agent spawning webrtc accessing nodes which establish peer-connections with webrtc clients, receive media streams from and send media streams to webrtc clients
+streaming-agent|0 or many|This agent spawning streaming accessing nodes which pull external streams from sources and push streams to rtmp/rtsp destinations
+recording-agent|0 or many|This agent spawning recording nodes which record the specified audio/video streams to permanent storage facilities
+audio-agent|1 or many|This agent spawning audio processing nodes which perform audio transcoding and mixing
+video-agent|1 or many|This agent spawning video processing nodes which perform video transcoding and mixing
+analytics-agent|0 or many|This agent spawning media analyzing nodes which perform media analytics
+sip-agent|0 or many|This agent spawning sip processing nodes which handle sip connections
+sip-portal|0 or 1|The portal for initializing rooms' sip settings and scheduling sip agents to serve for them
+app|0 or 1|The sample web application for reference, users should use their own application server
+management-console|0 or 1|The console for conference management
