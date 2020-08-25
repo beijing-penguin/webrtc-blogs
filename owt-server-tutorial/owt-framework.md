@@ -40,4 +40,4 @@ management-console|0 or 1个|用于会议管理的web控制台 https://192.168.7
 
 ## OWT架构图
 
-<p align="center"><img  src="../img/3.png" /></p>
+<p align="center"><img  src="../img/3.jpg" /></p>
