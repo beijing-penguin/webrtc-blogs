@@ -37,3 +37,7 @@ sip-agent|0 or 多个|信令处理节点
 sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip处理节点为会议室提供服务
 app|0 or 1个|提供参考的web demo案例页面，通过https://192.168.72.140:3004 访问
 management-console|0 or 1个|用于会议管理的web控制台 https://192.168.72.140:3300/console
+
+## OWT架构图
+
+<p align="center"><img  src="../img/3.png" /></p>
