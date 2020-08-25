@@ -18,7 +18,7 @@ OWT-Server架构时基于MCU和SFU架构基础形式开发的流媒体服务。S
 
 
 ## OWT架构
-`OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。owt以类似微服务的架构形式启动1个或多个agent，来到达高可用和负载均衡的效果。owt启动时，会启动如下组件：
+`OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。owt以类似微服务的架构形式启动1个或多个agent，并且每个agent都被cluster-manager管理，以到达高可用和负载均衡。owt启动时，会启动如下组件：
 
  **OWT分布式服务器组件**
 组件名|部署数量|服务说明
