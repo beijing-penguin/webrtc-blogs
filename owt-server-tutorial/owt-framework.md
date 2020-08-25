@@ -18,22 +18,22 @@ OWT-Server架构时基于MCU和SFU架构基础形式开发的流媒体服务。S
 
 
 ## OWT架构
-`OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。
+`OWT-Server` 不仅支持SFU模式(owt安装完成后，可以SFU直接访问demo页面：`https://192.168.72.140:3004/?forward=true`)，同时也支持MCU视频混合模式（`https://192.168.72.140:3004`）。owt以类似微服务的架构形式启动1个或多个agent，来到达高可用和负载均衡的效果。owt启动时，会启动如下组件：
 
- **分布式OWT服务器组件**
+ **OWT分布式服务器组件**
 组件名|部署数量|服务说明
 --------|--------|--------
 management-api|1 or 多个|对外API访问接口，主要功能有：创建/删除/修改房间，生成和验证令牌。可以部署多个来实现负载均衡
-cluster-manager|1 or 多个|The manager of all active workers in the cluster, checking their lives, scheduling workers with the specified purposes according to the configured policies. If one has been elected as master, it will provide service; others will be standby
-portal|1 or many|The signaling server, handling service requests from Socket.IO clients
-conference-agent|1 or 多个|This agent handles room controller logics
-webrtc-agent|1 or 多个|This agent spawning webrtc accessing nodes which establish peer-connections with webrtc clients, receive media streams from and send media streams to webrtc clients
-streaming-agent|0 or 多个|This agent spawning streaming accessing nodes which pull external streams from sources and push streams to rtmp/rtsp destinations
-recording-agent|0 or 多个|This agent spawning recording nodes which record the specified audio/video streams to permanent storage facilities
-audio-agent|1 or 多个|This agent spawning audio processing nodes which perform audio transcoding and mixing
-video-agent|1 or 多个|This agent spawning video processing nodes which perform video transcoding and mixing
-analytics-agent|0 or many|This agent spawning media analyzing nodes which perform media analytics
-sip-agent|0 or 多个|This agent spawning sip processing nodes which handle sip connections
-sip-portal|0 or 1个|The portal for initializing rooms' sip settings and scheduling sip agents to serve for them
-app|0 or 1个|The sample web application for reference, users should use their own application server
-management-console|0 or 1个|The console for conference management
+cluster-manager|1 or 多个|集群管理器，根据agent.toml配置文件的集群策略 分配请求到不同的节点，负载均衡和高可用
+portal|1 or many|信令服务器，nodejs 以 websocket长连接的形式完成信令sdp交换的服务
+conference-agent|1 or 多个| 会议房间控制
+webrtc-agent|1 or 多个|直接与客户端建立udp Peerconnection链接，底层通过rtp（UDP）协议进行数据传输
+streaming-agent|0 or 多个|将房间的媒体流，以rtmp/rtsp的协议，向CDN或者其他终端 进行数据推送
+recording-agent|0 or 多个|媒体流本地持久化录制
+audio-agent|1 or 多个|音频转码和混合
+video-agent|1 or 多个|视频转码和混合
+analytics-agent|0 or many|流媒体数据分析
+sip-agent|0 or 多个|信令处理节点
+sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip处理节点为会议室提供服务
+app|0 or 1个|提供参考的web demo案例页面，通过https://192.168.72.140:3004 访问
+management-console|0 or 1个|用于会议管理的web控制台 https://192.168.72.140:3300/console
