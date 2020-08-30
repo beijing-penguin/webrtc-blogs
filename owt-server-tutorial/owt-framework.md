@@ -1,6 +1,6 @@
 
 ## MCU和SFU
-OWT-Server架构基于MCU和SFU架构基础形式开发的流媒体服务。 
+OWT-Server架构基于MCU和SFU架构基础形式开发的流媒体服务。 <br />
 SFU和MCU的区别（如下图）
 
 <p align="center"><img width="100%" src="../img/5.png" /></p>
