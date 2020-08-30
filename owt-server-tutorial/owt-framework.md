@@ -31,7 +31,7 @@ SFU和MCU的区别（如下图）
 
 
 ## OWT架构
-<p align="center"><img width="200%"  src="../img/3.jpg" /></p>
+<p align="center"><img width="300%"  src="../img/3.jpg" /></p>
 
 `OWT-Server` 可同时支持SFU、MCU两种模式。 
 
