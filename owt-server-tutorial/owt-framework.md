@@ -31,11 +31,13 @@ SFU和MCU的区别（如下图）
 
 
 ## OWT架构
+<p align="center"><img width="100%"  src="../img/3.jpg" /></p>
+
 `OWT-Server` 可同时支持SFU、MCU两种模式。 
 
 owt启动时，会以类似微服务的架构形式启动1个或多个agent，并且每个agent都被cluster-manager管理，以到达高可用和负载均衡，以及各个agent负责对应的流媒体数据处理。。 <br />
 
-owt启动时，会启动如下组件：
+启动如下组件：
 
  **OWT分布式服务器组件**
 组件名|部署数量|服务说明
@@ -55,6 +57,3 @@ sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip处理节点�
 app|0 or 1个|提供参考的web demo案例页面，通过https://192.168.72.140:3004 访问
 management-console|0 or 1个|用于会议管理的web控制台 https://192.168.72.140:3300/console
 
-## OWT架构图
-
-<p align="center"><img width="100%"  src="../img/3.jpg" /></p>
