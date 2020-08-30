@@ -18,6 +18,7 @@
 * [x] [OWT架构篇](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-framework.md)
 * [x] [编译安装ubuntu/centos](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/owt-server-install.md)
 * [ ] [OWT研究笔记](https://github.com/beijing-penguin/webrtc-blogs)
-* [x] [代码结构](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/directory_tree.md)
+* [x] [目录结构](https://github.com/beijing-penguin/webrtc-blogs/blob/master/owt-server-tutorial/directory_tree.md)
 * [ ] [绘制文本](https://github.com/beijing-penguin/webrtc-blogs)
 * [ ] [集群部署](https://github.com/beijing-penguin/webrtc-blogs)
+* [ ] [硬件加速](https://github.com/beijing-penguin/webrtc-blogs)
