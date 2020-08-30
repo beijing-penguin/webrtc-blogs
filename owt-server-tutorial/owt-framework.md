@@ -33,7 +33,7 @@ SFU和MCU的区别（如下图）
 ## OWT架构
 <p align="center"><img width="100%"  src="../img/3.jpg" /></p>
 
-`OWT-Server` 可同时支持SFU、MCU两种模式。 
+`OWT-Server` 可同时支持SFU、MCU两种模式。而mesh是不需要服务器参与的，所以只需要终端浏览器交换sdp，建立webrtc连接即可。 
 
 owt启动时，会以类似微服务的架构形式启动1个或多个agent，并且每个agent都被cluster-manager管理，以到达高可用和负载均衡，以及各个agent负责对应的流媒体数据处理。。 <br />
 
