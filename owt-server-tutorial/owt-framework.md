@@ -56,3 +56,10 @@ sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip-agent处理�
 app|0 or 1个|提供参考的web demo案例页面，通过https://IP地址:3004 访问
 management-console|0 or 1个|用于会议管理的web控制台 https://IP地址:3300/console
 
+## OWT-Server优势
+
+- 分布式，可扩展且可靠的SFU + MCU架构的支持。其中MCU模式可以 使得终端性能和带宽的压力非常小。
+- 可借助英特尔®酷睿™和英特尔®至强®处理器上的高性能VP8，VP9，H.264和HEVC实时转码
+- 完善的流媒体协议的支持，包括WebRTC，RTSP，RTMP，HLS，MPEG-DASH
+- 自适应不同网络环境的智能（QoS）算法控制机制
+- 能够自定义 实时媒体流分析插件，对流数据 实时分析，比如人脸检查，在线教育场景下的课堂举手识别等等实时场景。
