@@ -31,7 +31,7 @@ SFU和MCU的区别（如下图）
 
 
 ## OWT架构
-<p align="center"><img width="300%"  src="../img/3.jpg" /></p>
+<p align="center"><img width="100%"  src="../img/3.jpg" /></p>
 
 `OWT-Server` 可同时支持SFU、MCU两种模式。 
 
@@ -53,7 +53,7 @@ audio-agent|1 or 多个|音频转码和混合
 video-agent|1 or 多个|视频转码和混合
 analytics-agent|0 or many|流媒体数据分析
 sip-agent|0 or 多个|信令处理节点
-sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip处理节点为会议室提供服务
+sip-portal|0 or 1个|初始化会议室的sip配置，并调度sip-agent处理节点为会议室提供服务
 app|0 or 1个|提供参考的web demo案例页面，通过https://192.168.72.140:3004 访问
 management-console|0 or 1个|用于会议管理的web控制台 https://192.168.72.140:3300/console
 
