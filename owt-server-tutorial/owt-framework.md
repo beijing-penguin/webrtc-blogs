@@ -37,7 +37,7 @@ owt架构也是基于此架构为基础研发的webrtc网关流媒体服务端�
 
 
 ## OWT-Server的内部架构
-<p align="center"><img width="100%"  src="../img/3.jpg" /></p>
+<p align="center"><img width="100%"  src="../img/6.jpg" /></p>
 
 `OWT-Server` 可同时支持SFU、MCU两种模式。而mesh是不需要服务器参与的，所以只需要终端浏览器交换sdp，建立webrtc连接即可。 
 
